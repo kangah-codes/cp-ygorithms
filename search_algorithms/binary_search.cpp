@@ -5,10 +5,10 @@ int binary_search(int arr[], int i, int r, int val){
 		int mid = i + (r-1) / 2;
 		if (arr[mid] == val){
 			return mid;
-		}else if (arr[mid] < val){
-			return binary_search(arr, mid+1, r, val);
+		}else if (arr[mid] > val){
+			return binary_search(arr, i, mid+1, val);
 		}else{
-			return binary_search(arr, mid-1, r, val);
+			return binary_search(arr, mid+1, r, val);
 		}
 	}else{
 		return -1;
