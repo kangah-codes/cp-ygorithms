@@ -6,7 +6,7 @@ int binary_search(int arr[], int i, int r, int val){
 		if (arr[mid] == val){
 			return mid;
 		}else if (arr[mid] > val){
-			return binary_search(arr, i, mid+1, val);
+			return binary_search(arr, i, mid-1, val);
 		}else{
 			return binary_search(arr, mid+1, r, val);
 		}
